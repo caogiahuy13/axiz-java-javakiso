@@ -71,7 +71,6 @@
 	String reply1 = robot.reply1(name);
 	String reply2 = robot.reply2(age);
 	String reply3 = robot.reply3(bloodType);
-
 %>
 
 <!DOCTYPE html>
