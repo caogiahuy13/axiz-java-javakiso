@@ -14,7 +14,7 @@
 
     // セッションから現在の所持金を取得
     // int money = 150000; //現在は仮で値をセットしている。実際はセッションから取得する
-    int money = 0;
+    int money = 150000;
     if (session.getAttribute("money") != null) {
     	money = (int) session.getAttribute("money");
     }

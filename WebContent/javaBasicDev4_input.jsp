@@ -12,12 +12,19 @@
     // 所持金をセッションから取得
     //int money = 150000; //現在は仮で値をセットしている。実際はセッションから取得する
 
+    String btn = request.getParameter("btn");
+
+    int money = 150000;
+
     if (session.getAttribute("money") == null) {
-        session.setAttribute("money", 150000);
+        session.setAttribute("money", money);
     }
 
-    int money = (int) session.getAttribute("money");
-
+    if (btn != null && btn.equals("reset")) {
+        session.invalidate();
+    } else {
+    	money = (int) session.getAttribute("money");
+    }
 %>
 <!DOCTYPE html>
 <html>
